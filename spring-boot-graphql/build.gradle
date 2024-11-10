@@ -1,0 +1,35 @@
+plugins {
+    id 'org.springframework.boot' version '3.2.5'
+    id 'io.spring.dependency-management' version '1.1.0'
+    id 'java'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-devtools'
+    implementation 'org.springframework.boot:spring-boot-starter-logging'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation 'com.graphql-java:graphql-java-tools:4.3.0'
+    implementation 'com.graphql-java:graphql-spring-boot-starter:4.0.0'
+    implementation 'com.graphql-java:graphiql-spring-boot-starter:4.0.0'
+    implementation 'org.springframework:spring-context:5.1.5.RELEASE'
+
+
+}
+
+test {
+    useJUnitPlatform()
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
